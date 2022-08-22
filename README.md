@@ -60,6 +60,26 @@ Let also take example on normally api request with stardand http methods
 ```
 Fantastic right! and super cool!
 
+So now on moses are able to make super request to our commandement server!,
+
+This package also contain HttpResponse Helper class, which support your json response to remove all null value, on the go!
+To use it, u need just one class ```bash HttpResponse ```
+
+let take example with it and see how it work!
+```PHP 
+  function httpJsonResponse(?string $message, $data = null, array $with, int $code = 200): JsonResponse {
+      $response = HttpResponse::create(array_merge([
+          'success' => ($code > 199 && $code < 300) ? true : false,
+          'data' => $data,
+          'message' => $message
+      ], $with));
+
+      return response()->json($response->extract(), $code);
+  }
+```
+And whenver one of the passed parameter is null, the HttpResponse delete it from the parameters,
+soon or later we're going to another way of making it optional.
+
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
