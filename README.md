@@ -44,11 +44,13 @@ Let also take example on normally api request with stardand http methods
   $http->withHeaders([
       'Authorization' => $accessToken,
       'Accept' => 'application/json',
-  ])->withData([
+  ]);
+  
+  $http->withData([
     'name' => 'moses',
     'location' => 'mountain-sinai',
     'command' => 'navigate islaels'
-  );
+  ]);
   
   $http->request('POST', '/api/sync-movement')
 
