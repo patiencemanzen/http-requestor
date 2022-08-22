@@ -77,7 +77,7 @@ let take example with it and see how it work!
       return response()->json($response->extract(), $code);
   }
 ```
-And whenver one of the passed parameter is null, the HttpResponse delete it from the parameters,
+And whenever one of the passed parameter is null, the HttpResponse delete it from the parameters,
 soon or later we're going to another way of making it optional.
 
 ## Contributing
