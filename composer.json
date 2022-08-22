@@ -1,0 +1,19 @@
+{
+    "name": "patienceman/httprequestor",
+    "description": "http client request helper class",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Patienceman\\Httprequestor\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "manirabona-programer",
+            "email": "hseal419@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
