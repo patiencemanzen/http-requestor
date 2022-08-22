@@ -68,9 +68,9 @@
 
             $this->server = $server;
 
-            $this->stdMethods = config('http-requestor.methods');
+            $this->stdMethods = $this->exceptionalConfig(config('http-requestor.methods'));
 
-            $this->stdStatus = config('http-requestor.status');
+            $this->stdStatus = $this->exceptionalConfig(config('http-requestor.status'));
         }
 
         /**

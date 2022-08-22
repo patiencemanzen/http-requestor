@@ -3,7 +3,6 @@
 
     use Closure;
     use Illuminate\Http\JsonResponse;
-    use Patienceman\HttpRequestor\Configs\HttpStatuses;
     use Patienceman\HttpRequestor\Exceptions\HttpRequestorException;
     use Patienceman\HttpRequestor\HttpResponse;
     use Throwable;
@@ -84,5 +83,18 @@
 
             if($stads == "status")
                 return config('http-requestor.status');
+        }
+
+        /**
+         * Check if http-requestor config file published
+         *
+         * @param mixed|\Illuminate\Config\Repository
+         * @return Exception|
+         */
+        public function exceptionalConfig(\Illuminate\Config\Repository $config) {
+            if (is_null($config))
+                throw new \Exception('Missing config file, Please publich http-requestor config file');
+
+            return $config;
         }
     }
