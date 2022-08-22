@@ -7,6 +7,7 @@
     use Patienceman\HttpRequestor\Traits\HttpUtils;
 
     class HttpRequestorException extends Exception {
+
         use HttpUtils;
 
         /**
@@ -91,7 +92,7 @@
             if ($this->data == []){
                 $this->httpJsonResponse($this->getMessage(), null, [
                     'customer_care' => 'For more explanation about this, Please call the center'
-                ], HttpStatuses::BAD_REQUEST);
+                ], 400);
             }
 
             return $this;

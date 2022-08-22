@@ -3,7 +3,6 @@
 
     use Closure;
     use Illuminate\Http\JsonResponse;
-    use Patienceman\HttpRequestor\Configs\HttpStatuses;
     use Patienceman\HttpRequestor\Exceptions\HttpRequestorException;
     use Patienceman\HttpRequestor\HttpResponse;
     use Throwable;
