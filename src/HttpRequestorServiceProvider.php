@@ -23,7 +23,7 @@
             if ($this->app->runningInConsole()) {
 
                 $this->publishes([
-                  __DIR__.'/../config/http-requestor.php' => config_path('HttpConfigs.php'),
+                  __DIR__.'HttpConfigs.php' => config_path('HttpConfigs.php'),
                 ], 'HttpConfigs');
 
             }
