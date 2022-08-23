@@ -91,8 +91,8 @@
          * @param mixed|\Illuminate\Config\Repository
          * @return Exception|
          */
-        public function exceptionalConfig(\Illuminate\Config\Repository $config) {
-            if (is_null($config))
+        public function exceptionalConfig($config) {
+            if(file_exists(config_path('http-requestor.php')))
                 throw new \Exception('Missing config file, Please publich http-requestor config file');
 
             return $config;
