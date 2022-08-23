@@ -1,8 +1,15 @@
 {
     "name": "patienceman/httprequestor",
-    "description": "http client request helper class",
-    "type": "library",
+    "description": "HTTP Requestor: Package for a client request that supports you to make an external service request easily and with fast usage",
+    "type": "package",
     "license": "MIT",
+    "keywords": [
+        "php",
+        "Http",
+        "Request",
+        "helper",
+        "Client"
+    ],
     "autoload": {
         "psr-4": {
             "Patienceman\\HttpRequestor\\": "src/"
@@ -14,6 +21,16 @@
             "email": "hseal419@gmail.com"
         }
     ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Patienceman\\HttpRequestor\\HttpRequestorServiceProvider"
+            ],
+            "aliases": {
+                "Filtan": "Patienceman\\HttpRequestor\\Facades\\HttpRequestor"
+            }
+        }
+    },
     "minimum-stability": "dev",
     "require": {}
 }

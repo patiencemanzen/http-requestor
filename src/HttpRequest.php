@@ -6,7 +6,7 @@
     use Illuminate\Support\Facades\Http;
     use Patienceman\HttpRequestor\Traits\HttpUtils;
 
-    class HttpRequestor {
+    class HttpRequest {
 
         use HttpUtils;
 
