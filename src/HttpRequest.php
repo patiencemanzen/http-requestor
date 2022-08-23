@@ -4,7 +4,6 @@
     use Exception;
     use GuzzleHttp\Client;
     use Illuminate\Support\Facades\Http;
-    use Patienceman\HttpRequestor\Traits\HttpUtils;
 
     class HttpRequest {
 

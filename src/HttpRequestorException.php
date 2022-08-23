@@ -1,9 +1,8 @@
 <?php
 
-    namespace Patienceman\HttpRequestor\Exceptions;
+    namespace Patienceman\HttpRequestor;
 
     use Exception;
-    use Patienceman\HttpRequestor\Traits\HttpUtils;
 
     class HttpRequestorException extends Exception {
 

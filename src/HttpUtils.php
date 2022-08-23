@@ -1,5 +1,5 @@
 <?php
-    namespace Patienceman\HttpRequestor\Traits;
+    namespace Patienceman\HttpRequestor;
 
     use Closure;
     use Illuminate\Http\JsonResponse;

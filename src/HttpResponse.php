@@ -2,7 +2,6 @@
     namespace Patienceman\HttpRequestor;
 
     use Illuminate\Support\Arr;
-    use Patienceman\HttpRequestor\Traits\HttpUtils;
 
     class HttpResponse {
 

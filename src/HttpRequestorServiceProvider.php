@@ -21,7 +21,7 @@
          */
         public function boot() {
             $this->publishes([
-                __DIR__.'/../config/http-requestor.php' => config_path('configs/HttpConcerns.php'),
+                __DIR__.'/../config/http-requestor.php' => config_path('HttpConfigs.php'),
             ]);
         }
     }
