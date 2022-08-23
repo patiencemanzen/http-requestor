@@ -169,8 +169,7 @@
             $this->catchIf(function() use ($method, $url) {
                 $method = $this->prepare($method);
 
-                $response = Http::withHeaders($this->headers)
-                                ->$method($this->server . $url, $this->payload);
+                $response = Http::withHeaders($this->headers)->$method($this->server . $url, $this->payload);
 
                 $this->response = $response->json();
             }, $exception);
