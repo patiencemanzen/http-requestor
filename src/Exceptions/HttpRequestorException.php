@@ -3,7 +3,6 @@
     namespace Patienceman\HttpRequestor\Exceptions;
 
     use Exception;
-    use Patienceman\HttpRequestor\Configs\HttpStatuses;
     use Patienceman\HttpRequestor\Traits\HttpUtils;
 
     class HttpRequestorException extends Exception {
