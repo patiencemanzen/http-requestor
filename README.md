@@ -4,7 +4,7 @@ HTTP Requestor: Package for a client request that supports you to make an extern
 
 ## Installation
 
-To install the package don't require much requirement except to paste the following command in laravel terminal, and you're good to go.
+Installing the package doesn't require much requirement except to paste the following command in the laravel terminal, and you're good to go.
 
 ```bash
   composer require patienceman/httprequestor
@@ -12,17 +12,22 @@ To install the package don't require much requirement except to paste the follow
 
 ## Usage
 
-To use Http Requestor u need to call ```bash HttpRequest `` class,
-Let take example with it and see the simplisity
+To use HTTP Requestor u need to call  ```HttpRequest ``` class,
+But before everything you need to publish the config file for "HTTP requestor",
+Just run!
+```bash 
+php artisan vendor:publish --tag=HttpConfigs
+```
+Let's take the example with it and see the simplicity
 
 ```PHP
   $http = HttpRequest::server('https://commandement.com');
 ```
-So!, now you can make request with all stardard methods.
-There are two way this package is usefull, by requesting 
-access token to server or by send normal request
+So!, now you can make requests with all standard methods.
+There are two ways this package is useful, by requesting 
+an access token to the server or by sending a normal request
 
-let take example on requesting access token
+let's take the example of requesting access token
 ```PHP
   $http = HttpRequest::server('https://commandement.com');
 
@@ -35,9 +40,9 @@ let take example on requesting access token
 
   return $http->requestToken('/oauth/token');
 ```
-So now we are able to request access token.
+So now we are able to request an access tokens.
 
-Let also take example on normally api request with stardand http methods
+Let also take the example of a normally api request with standard HTTP methods
 ```PHP
   $http = HttpRequest::server('https://commandement.com');
 
@@ -60,12 +65,12 @@ Let also take example on normally api request with stardand http methods
 ```
 Fantastic right! and super cool!
 
-So now on moses are able to make super request to our commandement server!,
+So now on Moses are able to make a super request to our commandment server!,
 
-This package also contain HttpResponse Helper class, which support your json response to remove all null value, on the go!
+This package also contains the HttpResponse Helper class, which support your JSON response to remove all null value, on the go!
 To use it, u need just one class ```bash HttpResponse ```
 
-let take example with it and see how it work!
+let's take an example with it and see how it works!
 ```PHP 
   function httpJsonResponse(?string $message, $data = null, array $with, int $code = 200): JsonResponse {
       $response = HttpResponse::create(array_merge([
@@ -77,7 +82,7 @@ let take example with it and see how it work!
       return response()->json($response->extract(), $code);
   }
 ```
-And whenever one of the passed parameter is null, the HttpResponse delete it from the parameters,
+And whenever one of the passed parameters is null, the HttpResponse deletes it from the parameters,
 soon or later we're going to another way of making it optional.
 
 ## Contributing
