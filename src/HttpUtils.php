@@ -91,7 +91,7 @@
          * @return Exception|
          */
         public function exceptionalConfig($config) {
-            if(file_exists(config_path('http-requestor.php')))
+            if(!file_exists(config_path('http-requestor.php')))
                 throw new \Exception('Missing config file, Please publich http-requestor config file');
 
             return $config;
