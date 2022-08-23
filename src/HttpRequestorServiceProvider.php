@@ -20,8 +20,12 @@
          * @return void
          */
         public function boot() {
-            $this->publishes([
-                __DIR__.'/../config/http-requestor.php' => config_path('HttpConfigs.php'),
-            ]);
+            if ($this->app->runningInConsole()) {
+
+                $this->publishes([
+                  __DIR__.'/../config/http-requestor.php' => config_path('HttpConfigs.php'),
+                ], 'HttpConfigs');
+
+            }
         }
     }
